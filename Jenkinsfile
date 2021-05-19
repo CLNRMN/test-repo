@@ -11,3 +11,5 @@ pipeline {
 				sh 'ansible -i /var/jenkins_home/workspace/test/Inventory -m setup'
 			}
 	}
+}
+}
