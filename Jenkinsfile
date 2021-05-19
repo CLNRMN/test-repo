@@ -8,7 +8,7 @@ pipeline {
 		}
 		stage('ansible') {
 			steps{
-				sh 'ansible -i /var/jenkins_home/workspace/test/Inventory -m setup'
+				sh 'ansible -i /var/jenkins_home/workspace/test/Inventory all -m setup'
 			}
 	}
 }
