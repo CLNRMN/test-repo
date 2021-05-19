@@ -6,10 +6,15 @@ pipeline {
 				git 'https://github.com/CLNRMN/test-repo'
 			}
 		}
-		stage('ansible') {
-			steps{
-				sh 'ansible -i /var/jenkins_home/workspace/test/Inventory all -m setup'
+		stage('tst') {
+			steps{  
+				sh 'id'
 			}
-	}
+		}
+		stage('ansible') {
+			steps{  
+				sh 'ansible localhost -m setup'
+			}
+		}
 }
 }
